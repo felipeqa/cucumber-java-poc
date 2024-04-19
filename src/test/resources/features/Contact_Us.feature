@@ -9,4 +9,3 @@ Feature: Webdriver university - contact us page
     And comment
     And submit
     Then I should be present message
-    
