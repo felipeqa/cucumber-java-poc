@@ -5,7 +5,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "stepDefinitions" // Aqui é onde você especifica o pacote dos seus steps
+        glue = "stepDefinitions", // Aqui é onde você especifica o pacote dos seus steps
+        monochrome = true,
+        dryRun = false
 )
 public class RunCucumberTest {
 }
