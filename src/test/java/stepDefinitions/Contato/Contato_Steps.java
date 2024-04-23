@@ -1,7 +1,7 @@
 package stepDefinitions.Contato;
-
-import io.cucumber.java.es.Dado;
-import io.cucumber.java.it.Quando;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
 
 public class Contato_Steps {
     @Dado("que eu acesse a pagina de contato")
@@ -23,9 +23,8 @@ public class Contato_Steps {
     @Quando("enviar")
     public void enviar() {
         System.out.println("5");
-
     }
-    @Quando("eu recebo a seguinte mensagem {string}")
+    @Entao("eu recebo a seguinte mensagem {string}")
     public void eu_recebo_a_seguinte_mensagem(String string) {
         System.out.println(string);
     }
