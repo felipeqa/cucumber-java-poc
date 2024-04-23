@@ -1,4 +1,6 @@
  # language: pt
+
+ @contato
  Funcionalidade: Contato com a universidade
 
   Cenario: Validar o envio de contato
