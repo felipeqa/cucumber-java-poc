@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import stepDefinitions.base.Hooks;
 
-public class Login_Steps {
+public class Login_Steps extends Hooks {
 
     @Dado("a pagina de login")
     public void a_pagina_de_login() {
