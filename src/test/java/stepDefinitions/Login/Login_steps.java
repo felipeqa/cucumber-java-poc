@@ -22,7 +22,7 @@ public class Login_steps {
     private WebDriver  driver ;
     private WebDriverWait wait ;
 
-    @Before
+    @Before("@login")
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "/opt/homebrew/bin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -33,7 +33,7 @@ public class Login_steps {
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
-    @After
+    @After("@login")
     public void tearDown(){
         driver.quit();
     }

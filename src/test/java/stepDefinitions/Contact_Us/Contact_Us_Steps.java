@@ -16,7 +16,7 @@ public class Contact_Us_Steps {
 
     private WebDriver driver;
 
-   @Before
+   @Before("@contact_us")
    public void setup(){
        System.setProperty("webdriver.chrome.driver", "/opt/homebrew/bin/chromedriver");
        ChromeOptions chromeOptions = new ChromeOptions();
@@ -26,7 +26,7 @@ public class Contact_Us_Steps {
        driver.manage().window().maximize();
    }
 
-   @After
+   @After("@contact_us")
    public void tearDown(){
        driver.quit();
    }
