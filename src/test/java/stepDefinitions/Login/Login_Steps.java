@@ -17,7 +17,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class Login_steps {
+public class Login_Steps {
 
     private WebDriver  driver ;
     private WebDriverWait wait ;
@@ -30,7 +30,7 @@ public class Login_steps {
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @After("@login")
