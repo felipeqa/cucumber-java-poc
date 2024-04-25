@@ -1,4 +1,4 @@
-@contact_us
+@contact_us @1
 Feature: Webdriver university - contact us page
 
   Scenario: Validate Successful submission - unique data

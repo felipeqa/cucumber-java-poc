@@ -1,5 +1,5 @@
 # language: pt
-@login_background @all
+@login_background @all @1
 Funcionalidade: Login da universidade webdriver - Usando Background
 
   Contexto:

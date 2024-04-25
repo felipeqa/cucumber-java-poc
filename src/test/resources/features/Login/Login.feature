@@ -1,5 +1,5 @@
 # language: pt
-@login @all
+@login @all @1
 Funcionalidade: Login da universidade webdriver
 
   Esquema do Cenario: : Validar login
