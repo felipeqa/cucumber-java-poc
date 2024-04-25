@@ -5,10 +5,17 @@ import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import static driver.DriverFactory.getDriver;
+import static driver.DriverFactory.waitElement;
+
 public class Login_Steps {
+    private final WebDriver driver = getDriver();
+    private final WebDriverWait wait = waitElement();
 
     @Dado("a pagina de login")
     public void a_pagina_de_login() {
@@ -29,5 +36,6 @@ public class Login_Steps {
         Alert alert = driver.switchTo().alert();
         System.out.println(alert.getText());
         Assert.assertEquals(alert.getText(), mensagem);
+        alert.accept();
     }
 }

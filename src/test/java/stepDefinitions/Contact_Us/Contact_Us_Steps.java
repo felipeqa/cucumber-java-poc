@@ -4,9 +4,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import static driver.DriverFactory.getDriver;
+
 public class Contact_Us_Steps {
+
+    private WebDriver driver = getDriver();
 
     @Given("I access the web driver university contact us page")
     public void i_access_the_web_driver_university_contact_us_page() {
