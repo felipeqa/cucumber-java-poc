@@ -1,7 +1,7 @@
 # language: pt
 
 @poc
-Funcionalidade: Compartilhar dados entre os steps Teste @
+Funcionalidade: Compartilhar dados entre os steps Teste 2
 
   Cenario: Segundo teste Base
 
