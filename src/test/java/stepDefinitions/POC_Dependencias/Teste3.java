@@ -1,5 +1,6 @@
 package stepDefinitions.POC_Dependencias;
 
+import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.testng.Assert;
@@ -30,5 +31,15 @@ public class Teste3 {
     public void entao_a_soma_do_teste3_e_teste1() {
         int total = valor3Step3 + teste1.getValor1Step1();
         Assert.assertEquals(total,15);
+    }
+
+    @Dado("dado valor qualquer")
+    public void dado_valor_qualquer() {
+    }
+    @Quando("quando valor qualquer")
+    public void quando_valor_qualquer() {
+    }
+    @Então("entao valor qualquer")
+    public void entao_valor_qualquer() {
     }
 }

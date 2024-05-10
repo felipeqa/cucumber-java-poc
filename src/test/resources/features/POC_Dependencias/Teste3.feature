@@ -14,3 +14,9 @@ Funcionalidade: Compartilhar dados entre os steps Teste 3
     Dado dado valor teste1
     Quando quando valor teste3
     Então entao a soma do teste3 e teste1
+
+  Cenario: Terceiro teste Base - Sem dependencia
+
+    Dado dado valor qualquer
+    Quando quando valor qualquer
+    Então entao valor qualquer
