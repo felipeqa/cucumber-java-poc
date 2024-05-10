@@ -6,16 +6,15 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import pageObject.Base_PO;
 
-import static driver.DriverFactory.getDriver;
+public class Contact_Us_Steps extends Base_PO {
 
-public class Contact_Us_Steps {
-
-    private WebDriver driver = getDriver();
+    private WebDriver driver = getDriver_PO();
 
     @Given("I access the web driver university contact us page")
     public void i_access_the_web_driver_university_contact_us_page() {
-        driver.get("https://webdriveruniversity.com/Contact-Us/contactus.html");
+        navigateTo_URL("https://webdriveruniversity.com/Contact-Us/contactus.html");
     }
 
     @When("I enter a unique first name")

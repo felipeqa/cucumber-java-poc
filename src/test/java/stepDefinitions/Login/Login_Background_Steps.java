@@ -9,18 +9,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import static driver.DriverFactory.getDriver;
+import pageObject.Base_PO;
 import static driver.DriverFactory.waitElement;
 
-public class Login_Background_Steps{
+public class Login_Background_Steps extends Base_PO {
 
-    private WebDriver driver = getDriver();
+    private WebDriver driver = getDriver_PO();
     private WebDriverWait wait = waitElement();
 
     @Dado("a pagina de login - usando background")
     public void a_pagina_de_login_usando_background() {
-        driver.get("https://www.webdriveruniversity.com/Login-Portal/index.html?");
+        navigateTo_URL("https://www.webdriveruniversity.com/Login-Portal/index.html?");
     }
     @Quando("passo usuario {string} e senha {string}")
     public void passo_usuario_e_senha(String user, String pass) {
