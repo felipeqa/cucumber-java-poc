@@ -24,4 +24,8 @@ public class Teste2 {
         double total = valor2Step2 + teste1.getValor1Step1(); //precisamos do valor1step1
         Assert.assertEquals(total,32.5);
     }
+
+    public double getValor2Step2() {
+        return valor2Step2;
+    }
 }
