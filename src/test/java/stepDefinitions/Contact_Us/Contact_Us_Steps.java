@@ -19,8 +19,9 @@ public class Contact_Us_Steps extends Base_PO {
 
     @When("I enter a unique first name")
     public void i_enter_a_unique_first_name() throws InterruptedException {
-        String firstName = "Luis Felipe " + System.currentTimeMillis();
-        driver.findElement(By.cssSelector("input[name=first_name]")).sendKeys(firstName);
+        String firstName = "Luis Felipe " + generateRandomNumber(5);
+        sendKeys(By.cssSelector("input[name=first_name]"), firstName);
+//        driver.findElement(By.cssSelector("input[name=first_name]")).sendKeys(firstName);
     }
 
     @When("last name")

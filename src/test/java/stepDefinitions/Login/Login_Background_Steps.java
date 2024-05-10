@@ -23,7 +23,9 @@ public class Login_Background_Steps extends Base_PO {
     }
     @Quando("passo usuario {string} e senha {string}")
     public void passo_usuario_e_senha(String user, String pass) {
-        driver.findElement(By.id("text")).sendKeys(user);
+
+        sendKeys(By.id("text"), user);
+//        driver.findElement(By.id("text")).sendKeys(user);
         driver.findElement(By.id("password")).sendKeys(pass);
     }
 
