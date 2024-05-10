@@ -2,6 +2,7 @@ package stepDefinitions.POC_Dependencias;
 
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import org.testng.Assert;
 
 public class Teste3 {
 
@@ -15,7 +16,8 @@ public class Teste3 {
 
     @Então("entao valor teste3")
     public void entao_valor_teste3() {
-
+        double valor = teste1.getValor1Step1() + teste2.getValor2Step2();
+        Assert.assertEquals(valor,32.5);
     }
 
     @Quando("quando valor teste3")
