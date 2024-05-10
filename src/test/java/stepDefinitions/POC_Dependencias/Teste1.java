@@ -26,4 +26,8 @@ public class Teste1 {
         int total = valor1Step1 + valor1Step2;
         Assert.assertEquals(total,30);
     }
+
+    public int getValor1Step1() {
+        return valor1Step1;
+    }
 }
