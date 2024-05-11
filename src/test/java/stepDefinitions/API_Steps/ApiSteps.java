@@ -9,6 +9,11 @@ import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 
 public class ApiSteps {
+
+    static {
+        RestAssured.baseURI = "https://tranquil-cove-07655-38b519d38c2f.herokuapp.com";
+    }
+
     private String body;
     private Response response;
 
@@ -20,7 +25,6 @@ public class ApiSteps {
 
     @Quando("enviou esse json")
     public void enviou_esse_json() {
-        RestAssured.baseURI = "https://tranquil-cove-07655-38b519d38c2f.herokuapp.com";
         response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(body)
