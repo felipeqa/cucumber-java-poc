@@ -8,6 +8,8 @@ import org.testng.Assert;
 
 import static driver.DriverFactory.getDriver;
 
+//USANDO O DRIVER DA DRIVER FACTORY DIRETAMENTE
+
 public class Contato_Steps {
     private WebDriver driver = getDriver();
 

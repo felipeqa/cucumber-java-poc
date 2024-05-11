@@ -12,6 +12,8 @@ import org.testng.Assert;
 import pageObject.Base_PO;
 import static driver.DriverFactory.waitElement;
 
+//USANDO O DRIVER DA BASE PAGE OBJECT
+
 public class Login_Background_Steps extends Base_PO {
 
     private WebDriver driver = getDriver_PO();

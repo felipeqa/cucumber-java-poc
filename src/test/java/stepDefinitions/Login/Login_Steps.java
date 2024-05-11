@@ -13,6 +13,8 @@ import org.testng.Assert;
 import static driver.DriverFactory.getDriver;
 import static driver.DriverFactory.waitElement;
 
+//USANDO O DRIVER DIRETO DA DRIVER FACTORY
+
 public class Login_Steps {
     private final WebDriver driver = getDriver();
     private final WebDriverWait wait = waitElement();

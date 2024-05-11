@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pageObject.Base_PO;
 
+//USANDO O DRIVER VIA BASE PAGE OBJECT
+
 public class Contact_Us_Steps extends Base_PO {
 
     private WebDriver driver = getDriver_PO();
