@@ -39,6 +39,19 @@ public class Base_PO {
         wait.until(ExpectedConditions.elementToBeClickable(element)).sendKeys(textToType);
     }
 
+    public void waitFor(By by){
+        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(10));
+        //apenas um
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        //no curso o exemplo é para a lista
+//        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
+    }
+
+    public void waitFor(WebElement element){
+        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     public void waitForWebElementAndClick (By selectorType) {
         WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(selectorType)).click();
