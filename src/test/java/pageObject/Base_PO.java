@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.GlobalVars;
 
 import java.time.Duration;
 
@@ -30,17 +31,17 @@ public class Base_PO {
     }
 
     public void sendKeys (By selectorType, String textToType) {
-        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(GlobalVars.DEFAULT_EXPLICIT_TIMEOUT));
         wait.until(ExpectedConditions.elementToBeClickable(selectorType)).sendKeys(textToType);
     }
 
     public void sendKeys (WebElement element, String textToType) {
-        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(GlobalVars.DEFAULT_EXPLICIT_TIMEOUT));
         wait.until(ExpectedConditions.elementToBeClickable(element)).sendKeys(textToType);
     }
 
     public void waitFor(By by){
-        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(GlobalVars.DEFAULT_EXPLICIT_TIMEOUT));
         //apenas um
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         //no curso o exemplo é para a lista
@@ -48,7 +49,7 @@ public class Base_PO {
     }
 
     public void waitFor(WebElement element){
-        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(getDriver_PO(), Duration.ofSeconds(GlobalVars.DEFAULT_EXPLICIT_TIMEOUT));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
