@@ -23,7 +23,11 @@ public class Login_PO extends Base_PO {
     }
 
     public void login (String user, String pass) {
-        sendKeys(username, user);
+//        sendKeys(username, user);
+
+        //quando tenho um webElement posso chamar sendkeys, click direto, a partir dele
+        username.sendKeys(user);
+
         sendKeys(password, pass);
         waitForWebElementAndClick(loginButton);
     }
