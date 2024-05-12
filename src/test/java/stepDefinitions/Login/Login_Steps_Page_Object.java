@@ -5,6 +5,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pageObject.Login_PO;
@@ -24,6 +25,9 @@ public class Login_Steps_Page_Object {
 
     @Quando("passo {string} e {string} - Page Object")
     public void passo_e_page_object(String user, String pass) {
+        //validando o funcionamento do método
+        loginPo.waitFor(By.id("text"));
+
         loginPo.login(user, pass);
     }
 
