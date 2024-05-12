@@ -3,14 +3,19 @@ package stepDefinitions.Contact_Us;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.testng.Assert;
 import pageObject.Contact_Us_PO;
+import pageObject.Home_PO;
 
 public class ContactUsPageObjectSteps {
 
     private Contact_Us_PO contactUsPo;
+    private Home_PO homePo;
 
-    public ContactUsPageObjectSteps(Contact_Us_PO contactUsPo) {
+    public ContactUsPageObjectSteps(Contact_Us_PO contactUsPo, Home_PO homePo) {
         this.contactUsPo = contactUsPo;
+        this.homePo = homePo;
     }
 
     @Given("I access the web driver university contact us page - With Page Objects")
@@ -46,7 +51,8 @@ public class ContactUsPageObjectSteps {
     }
     @Then("I should be present message - With Page Objects")
     public void i_should_be_present_message_with_page_objects() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        homePo.waitFor(homePo.message);
+        var message = homePo.message.getText();
+        Assert.assertEquals(message, "Thank You for your Message!");
     }
 }
